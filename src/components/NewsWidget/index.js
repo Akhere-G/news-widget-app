@@ -2,6 +2,7 @@ import React from "react";
 import NewsWidgetHeader from "./NewsWidgetHeader";
 import NewsWidgetFooter from "./NewsWidgetFooter";
 import StoryList from "./StoryList";
+import styles from "./styles.module.css";
 import useNewsWidget from "./useNewsWidget";
 
 const NewsWidget = () => {
@@ -14,7 +15,7 @@ const NewsWidget = () => {
   } = useNewsWidget();
 
   return (
-    <div>
+    <div className={styles.newsWidget}>
       <NewsWidgetHeader
         sources={sources}
         currentSource={currentSource}

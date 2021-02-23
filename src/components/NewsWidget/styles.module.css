@@ -1,0 +1,8 @@
+.newsWidget {
+  background-color: #eee;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
