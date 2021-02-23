@@ -1,10 +1,11 @@
 import React from "react";
 import Story from "../Story";
+import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 const StoryList = ({ stories }) => {
   return (
-    <ul>
+    <ul className={styles.StoryList}>
       {stories.map(story => {
         return (
           <li key={story.id}>

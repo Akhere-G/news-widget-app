@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 const Story = ({ title, date, source, url }) => {
   return (
-    <div>
+    <div className={styles.story}>
       <h4>
-        <a href={url} target='_blank' rel='noreferrer'>
+        <a className={styles.title} href={url} target='_blank' rel='noreferrer'>
           {title}
         </a>
       </h4>
       <p>
         <span>{date}</span>
-        <span> {source} </span>
+        <span className={styles.source}> {source} </span>
       </p>
     </div>
   );
