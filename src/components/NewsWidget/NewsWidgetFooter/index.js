@@ -1,10 +1,13 @@
 import React from "react";
+import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 const NewsWidgetFooter = ({ showMoreStories }) => {
   return (
     <>
-      <button onClick={showMoreStories}>Show More</button>
+      <button className={styles.showMore} onClick={showMoreStories}>
+        Show More
+      </button>
     </>
   );
 };

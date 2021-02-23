@@ -1,0 +1,16 @@
+.showMore {
+  background-color: transparent;
+  color: #c46481;
+  border: 4px solid;
+  padding: 0.9em;
+  margin: 3rem 0 1rem 0;
+  font-weight: 700;
+  max-width: max-content;
+  transition: all 150ms ease-in;
+  cursor: pointer;
+}
+
+.showMore:hover {
+  background-color: #0001;
+  transition: all 150ms ease-in;
+}
