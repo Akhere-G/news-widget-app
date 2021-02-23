@@ -39,7 +39,10 @@ const useNewsWidget = () => {
   }, []);
 
   useEffect(() => {
-    setSources(["All Sources", ...new Set(stories.map(story => story.source))]);
+    setSources([
+      "Filter By Source",
+      ...new Set(stories.map(story => story.source)),
+    ]);
   }, [stories]);
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const useNewsWidget = () => {
 
       let currentStories;
 
-      if (currentSource === "All Sources") {
+      if (currentSource === "Filter By Source") {
         currentStories = stories;
       } else {
         currentStories = stories.filter(
