@@ -1,13 +1,14 @@
 import React from "react";
 import Story from "../Story";
+import PropTypes from "prop-types";
 
 const StoryList = ({ stories }) => {
   return (
     <ul>
       {stories.map(story => {
         return (
-          <li>
-            <Story key={story.id} {...story} />
+          <li key={story.id}>
+            <Story {...story} />
           </li>
         );
       })}
@@ -15,4 +16,14 @@ const StoryList = ({ stories }) => {
   );
 };
 
+StoryList.propTypes = {
+  stories: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      source: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
+};
 export default StoryList;
