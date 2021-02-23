@@ -1,0 +1,8 @@
+.StoryList {
+  margin: 0;
+  padding: 0;
+}
+
+.StoryList li {
+  list-style: none;
+}
