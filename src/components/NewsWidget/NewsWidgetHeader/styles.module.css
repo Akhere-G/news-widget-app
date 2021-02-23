@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: #c46481;
+  font-size: 1.5rem;
+  border-bottom: 5px solid;
+}
+
+.sourcesSelect {
+  border: 2px solid #555;
+  padding: 5px 20px;
+  border-radius: 5px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-color: transparent;
+
+  background-image: url("downArrow.png");
+
+  background-repeat: no-repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 0.65em auto, 100%;
+}
+
+/* Hide arrow icon in IE browsers */
+.sourcesSelect::-ms-expand {
+  display: none;
+}
+
+.sourcesSelect:hover {
+  border-color: #888;
+}
+/* Focus style */
+.sourcesSelect:focus {
+  border-color: #aaa;
+  color: #222;
+}

@@ -1,12 +1,14 @@
 import React from "react";
+import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 const NewsWidgetHeader = ({ sources, currentSource, setCurrentSource }) => {
   return (
-    <div>
-      <h4>News</h4>
+    <div className={styles.header}>
+      <h4 className={styles.title}>News</h4>
       <select
         value={currentSource}
+        className={styles.sourcesSelect}
         onChange={e => {
           setCurrentSource(e.target.value);
         }}
